@@ -140,7 +140,6 @@ namespace Protogame
 
             //A Instancia criada pela operacao nao e isntantanea, pois nao foi carregada por LoadAssetAsyn, e sim por LoadResourceLocationAsync.
             //Neste caso, existe a necessidade de esperar sync ou o callback de finalizacao de instancia com carregamento.
-            //Particulamente eu acho que isto e um BUG do Addressable.
             await op.Task;
 
             if (op.IsDone)
