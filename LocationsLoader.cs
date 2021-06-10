@@ -113,13 +113,11 @@ namespace Protogame
 
 
         /// <summary>
-        /// Cria uma nova instancia de alguma referencia carregada. E preciso ser asyncrono ou syncrono pois LoadResourceLocationsAsync nao carrega
-        /// a referencia previamente para manter o Instantiate instantaneo. Eu nao sei se isso e um bug ou nao, mas por hora o instantiate instantaneo e somente com
-        /// LoadAsync.
-        ///
+        /// Cria uma nova instancia randomica, baseada nos resultados encontrados na lista de locais. E preciso ser asyncrono ou syncrono pois LoadResourceLocationsAsync nao carrega
+        /// a referencia previamente para manter o Instantiate instantaneo. 
         /// Importante:
         /// Eu deveria usar trackHandle = false na instancia, pois eu quero garantir o desalocamento manual da referencia instanciada na memoria. Mas vou manter o default
-        /// true pois eu nao entendo perfeitamente o funcionamento dele das dependencias do objeto instanciado. Tambem nao tenho certeza se eu deixar false, o objeto sera limpo da memoria
+        /// true pois eu nao entendo perfeitamente o funcionamento dele nas dependencias do objeto instanciado. Tambem nao tenho certeza se eu deixar false, o objeto sera limpo da memoria
         /// quando a cena for descarregada!.
         ///
         /// Imporatnte2: Tasks nao funcionam em webGL. Usar Corotinas para esta finalidade
